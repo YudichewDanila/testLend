@@ -120,7 +120,6 @@ display: flex;
 flex-direction: column;
 width: 90%;
 padding: 5%;
-padding-left: 15%;
 justify-content: center;
 gap: 1px;
 border-radius: 75px;
@@ -132,16 +131,19 @@ font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-text-align: left;
+text-align: center;
 text-decoration: none;
 }
-.btn p{
+.btn span{
+    margin-left: -36px;
+}
+.btn b{
 color: #FFF;
 font-family: Inter;
 font-size: 25px;
 font-style: normal;
 font-weight: 700;
-line-height: normal; 
+line-height: normal;
 }
 .mainBtn_decorationText{
 color: #000;
@@ -194,7 +196,18 @@ line-height: normal;
 text-decoration-line: underline;
 }
 
-@media screen and (max-width: 450px) and (min-height:700px){
+.ovalWhite{
+    display: none;
+}
+@media screen and (max-width:300px) {
+    .headerText {
+    font-size: 8px;
+}
+.footerText a {
+    font-size: 8px;
+}
+}
+@media screen and (max-width: 450px) and (min-height:720px){
     .bg img{
         width: 120%;  
 }
@@ -209,6 +222,17 @@ text-decoration-line: underline;
 }
 .footerText a {
     font-size: 3.5vw;
+}
+.ovalWhite{
+    display: block;
+    width: 120%;
+    height: 120%;
+    background-color: #FFF;
+    position: fixed;
+    z-index: -1;
+    margin-top: -20%;
+    border-radius: 80px;
+    margin-left: -10%;
 }
 }
 @media screen and (max-width: 450px) and (min-height:850px){
@@ -228,6 +252,19 @@ text-decoration-line: underline;
     font-size: 3.5vw;
 }
 }
+@media screen and (max-width:400px) and (max-height:1000px) {
+    .ovalWhite{
+    display: block;
+    width: 120%;
+    height: 120%;
+    background-color: #FFF;
+    position: fixed;
+    z-index: -1;
+    margin-top: -20%;
+    border-radius: 80px;
+    margin-left: -10%;
+} 
+}
 @media screen and (min-width:333px) and (max-height:689px){
     .logo {
     max-width: 100px;
@@ -241,20 +278,27 @@ text-decoration-line: underline;
     margin: 0 auto;
 }
 }
-@media screen and (orientation: portrait) and (min-height:462px) and (max-height:600px) {
-    .logo {
+@media screen and (orientation: portrait) and (min-height:479px) and (max-height:600px) {
+main{
+    margin-top: -5%;
+}
+.logo {
     max-width: 100px;
 } 
 .age {
     height: 20px;
     width: 20px;
+}
+.mainText{
+    margin-top: 2%;
 }
 .mainImg {
     width: 50%;
     margin: 0 auto;
 }
 }
-@media screen and (orientation: portrait) and (max-height:462px) {
+@media screen and (orientation: portrait) and (max-height:479px) {
+   
     .logo {
     max-width: 100px;
 } 
@@ -269,7 +313,8 @@ text-decoration-line: underline;
         display: none;
     }
 }
-@media screen and (orientation: landscape) and (min-height:325px) and (max-height: 555px){
+@media screen and (orientation: landscape) and (min-height:479px) and (max-height: 555px){
+   
     .logo {
     max-width: 100px;
 } 
@@ -302,13 +347,16 @@ text-decoration-line: underline;
     line-height: normal;
     text-align: left;
     text-decoration: none;
+}
+.btn span {
+    margin-left: 0px;
 }
 footer {
     bottom: 8px;
 }
 }
 
-@media screen and (orientation: landscape) and  (max-height:325px){
+@media screen and (orientation: landscape) and  (max-height:479px){
     .logo {
     max-width: 100px;
 } 
@@ -316,6 +364,7 @@ footer {
     height: 20px;
     width: 20px;
 }
+
 .main_header {
     display: none;
 }
@@ -342,8 +391,17 @@ footer {
     text-align: left;
     text-decoration: none;
 }
+.btn span {
+    margin-left: 0px;
+}
 footer {
     bottom: 8px;
+}
+}
+
+@media screen and (min-height:1000px){
+main{
+    margin-top: 45%;
 }
 }
 </style>
@@ -376,10 +434,12 @@ footer {
             <div class="mainBtn">
                 <p class="mainBtn_text">1 день бесплатно</p>
                 <a href="#" type="submit" class="btn" name="submit">
-                    ПОПРОБОВАТЬ <p>ЗАБРАТЬ ПРИЗ</p>
+                    <span>ПОПРОБОВАТЬ</span><b>ЗАБРАТЬ ПРИЗ</b>
                 </a>
                 <p class="mainBtn_decorationText">Далее 50₽ в день</p>
+              <div class="ovalWhite"></div>
             </div>
+            
             <a class="cancelBtn">Отмена</a>
         </main>
         <footer>
