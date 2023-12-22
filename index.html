@@ -280,7 +280,7 @@
             Footer
         ---------------*/
     footer {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
@@ -695,68 +695,68 @@
             <a href="https://rumf.kiosk-mobile.ru/rules">Правила подписки поставщика услуги</a> | <a href="http://moy-m-portal.ru/moi_podpiski/">Личный кабинет</a>
 </div>
     </footer>
-    <script> 
-     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-     let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-        window.addEventListener('loaded', () => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        })
-        // We listen to the resize event
-        window.addEventListener('resize', () => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        document.getElementById('test').innerHTML = `${vh}px`
-        });
-        /*The window.onload function will run as  
-        soon as the window loads in the browser */
-        window.onload = function () { 
-  
-            /* This method returns the html element that 
-                has the ID attribute with the specified 
-                value. */
-            let canvas = document.getElementById("canv"); 
-  
-            /* This method returns a drawing context 
-                on the canvas, or null if the context 
-                identified is not supported. */
-            let context = canvas.getContext("2d"); 
-
-            /* It will change the style and appearance  
-                of the text to make it look more geeky. */
-            context.font = "32px 'Roboto', sans-serif"; 
-            context.fillStyle = "#fff"; 
-            context.textAlign = "center"; 
-  
-            let string = "1 день бесплатно"; 
-  
-            let angle = Math.PI * 0.33; // in radians 
-            let radius = 250; 
-  
-  
-            context.translate(300, 360); 
-            context.rotate(-1 * angle / 2); 
-  
-            for (let i = 0; i < string.length; i++) { 
-  
-                /* It is worth noting that we are not 
-                    rotating the text,here the whole 
-                    context is being rotated and 
-                    translated, and the letters are just 
-                    filled in it. */
-                context.rotate(angle / string.length); 
-                context.save(); 
-                context.translate(0, -1 * radius); 
-                context.fillText(string[i], 0, 0); 
-                context.restore(); 
-            } 
-        }; 
-    </script> 
+    
 </body>
+<script> 
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+       // Then we set the value in the --vh custom property to the root of the document
+       document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+       window.addEventListener('loaded', () => {
+       // We execute the same script as before
+       let vh = window.innerHeight * 0.01;
+       document.documentElement.style.setProperty('--vh', `${vh}px`);
+       })
+       // We listen to the resize event
+       window.addEventListener('resize', () => {
+       // We execute the same script as before
+       let vh = window.innerHeight * 0.01;
+       document.documentElement.style.setProperty('--vh', `${vh}px`);
+       document.getElementById('test').innerHTML = `${vh}px`
+       });
+       /*The window.onload function will run as  
+       soon as the window loads in the browser */
+       window.onload = function () { 
+ 
+           /* This method returns the html element that 
+               has the ID attribute with the specified 
+               value. */
+           let canvas = document.getElementById("canv"); 
+ 
+           /* This method returns a drawing context 
+               on the canvas, or null if the context 
+               identified is not supported. */
+           let context = canvas.getContext("2d"); 
+
+           /* It will change the style and appearance  
+               of the text to make it look more geeky. */
+           context.font = "32px 'Roboto', sans-serif"; 
+           context.fillStyle = "#fff"; 
+           context.textAlign = "center"; 
+ 
+           let string = "1 день бесплатно"; 
+ 
+           let angle = Math.PI * 0.33; // in radians 
+           let radius = 250; 
+ 
+ 
+           context.translate(300, 360); 
+           context.rotate(-1 * angle / 2); 
+ 
+           for (let i = 0; i < string.length; i++) { 
+ 
+               /* It is worth noting that we are not 
+                   rotating the text,here the whole 
+                   context is being rotated and 
+                   translated, and the letters are just 
+                   filled in it. */
+               context.rotate(angle / string.length); 
+               context.save(); 
+               context.translate(0, -1 * radius); 
+               context.fillText(string[i], 0, 0); 
+               context.restore(); 
+           } 
+       }; 
+   </script> 
 </html>
