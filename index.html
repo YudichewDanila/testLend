@@ -10,27 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-    .wrapper {
-            overflow: hidden;
-            width: 100%;
-            height: 100vh;
-            height: calc(var(--vh, 1vh) * 100);
-        }
-        .fixed {
-            position: fixed;
-        }
-        .w-100 {
-            width: 100%;
-        }
-        .h-100 {
-            height: 100%;
-        }
-        .b-0 {
-            bottom: 0;
-        }
-        .z-index-0 {
-            z-index: -1;
-        }
+   
     /*---------------
             Basic
         ---------------*/
@@ -61,7 +41,7 @@
 /*        background: #00B956;*/
 /*background: #721983;*/
 background: linear-gradient(180deg, #721983 37.5%, #1B051F 100%);
-
+overflow: hidden;
 
 
     }
@@ -636,7 +616,7 @@ font-size: 18rem;
 </head>
 
 <body>
-    <div class="wrapper fixed w-100 h-100 flex flex-col">
+
     <div class="back">
         <header>
             <div class="container">
@@ -674,7 +654,69 @@ font-size: 18rem;
 </div>
         </footer>
     </div>
-    </div>
+
+    <script> 
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+           // Then we set the value in the --vh custom property to the root of the document
+           document.documentElement.style.setProperty('--vh', `${vh}px`);
+   
+           window.addEventListener('loaded', () => {
+           // We execute the same script as before
+           let vh = window.innerHeight * 0.01;
+           document.documentElement.style.setProperty('--vh', `${vh}px`);
+           })
+           // We listen to the resize event
+           window.addEventListener('resize', () => {
+           // We execute the same script as before
+           let vh = window.innerHeight * 0.01;
+           document.documentElement.style.setProperty('--vh', `${vh}px`);
+           document.getElementById('test').innerHTML = `${vh}px`
+           });
+           /*The window.onload function will run as  
+           soon as the window loads in the browser */
+           window.onload = function () { 
+     
+               /* This method returns the html element that 
+                   has the ID attribute with the specified 
+                   value. */
+               let canvas = document.getElementById("canv"); 
+     
+               /* This method returns a drawing context 
+                   on the canvas, or null if the context 
+                   identified is not supported. */
+               let context = canvas.getContext("2d"); 
+   
+               /* It will change the style and appearance  
+                   of the text to make it look more geeky. */
+               context.font = "32px 'Roboto', sans-serif"; 
+               context.fillStyle = "#fff"; 
+               context.textAlign = "center"; 
+     
+               let string = "1 день бесплатно"; 
+     
+               let angle = Math.PI * 0.33; // in radians 
+               let radius = 250; 
+     
+     
+               context.translate(300, 360); 
+               context.rotate(-1 * angle / 2); 
+     
+               for (let i = 0; i < string.length; i++) { 
+     
+                   /* It is worth noting that we are not 
+                       rotating the text,here the whole 
+                       context is being rotated and 
+                       translated, and the letters are just 
+                       filled in it. */
+                   context.rotate(angle / string.length); 
+                   context.save(); 
+                   context.translate(0, -1 * radius); 
+                   context.fillText(string[i], 0, 0); 
+                   context.restore(); 
+               } 
+           }; 
+       </script> 
     <!--     <script type="text/javascript">
     history.pushState(null, null, "/");
     </script><input type="text" id="iload" value="0" style="display:none">
