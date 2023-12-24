@@ -41,11 +41,18 @@
 /*        background: #00B956;*/
 /*background: #721983;*/
 /*background: linear-gradient(180deg, #721983 37.5%, #1B051F 100%);*/
-background-image: url('./bg.JPG');
-background-size: 100% 100%;
 /* overflow: hidden;*/
 }
-
+.bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 
     .back {
@@ -618,7 +625,9 @@ font-size: 18rem;
 </head>
 
 <body>
-<div class="bg"></div>
+<div class="bg">
+    <img src="./bg.JPG"/>
+</div>
     <div class="back">
         <header>
             <div class="container">
