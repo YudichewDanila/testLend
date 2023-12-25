@@ -16,17 +16,17 @@
         */
 
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
         * {
             -webkit-box-sizing: border-box;
                     box-sizing: border-box;
             font-family: Roboto, sans-serif;
         }
-     
+
         :root {
             font-size: 10px;
             --btn-color: #ffffff;
-            --btn-dark: #000000;
+            --btn-dark: #ffffff;
         }
 
         html {
@@ -185,7 +185,7 @@
         }
 
         .text {
-            font-size: 0.8rem;
+            font-size: 1.2rem;
         }
 
         .text-white {
@@ -193,7 +193,7 @@
         }
 
         .text-black {
-            color: #000;
+            color: var(--btn-dark);
         }
 
         .text-large {
@@ -201,11 +201,11 @@
         }
 
         .text-xl {
-            font-size: 2rem;
+            font-size: 1.2rem;
         }
 
         .text-2xl {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         .text-medium {
@@ -249,7 +249,7 @@
         }
 
         .bg-purple {
-            background-color: #721983 !important;
+            background: linear-gradient(180deg, #721983 37.5%, #1B051F 100%) !important;
         }
 
         .bg-green {
@@ -370,7 +370,7 @@
         }
 
         .main-img img {
-            max-width: 15rem;
+            max-width: 30rem;
         }
 
         .main-img .absolute img {
@@ -378,22 +378,17 @@
         }
 
         .btn {
-            width: 18rem;
-            height: 18rem;
+            max-width: 30rem;
+            padding: 1.1rem 5.9rem;
             text-decoration: none;
-            text-align: center;
-            border-radius:180px;
         }
 
         .btn span {
             white-space: nowrap;
         }
 
-.textImg{
-    width: 10rem;
-}
-
         .white-block {
+            display: none;
             width: 70rem;
             min-width: 120vw;
             min-height: 100vh;
@@ -414,21 +409,25 @@
 
         .cancel-link {
             padding: 0.5rem 2rem;
-            border: 1px solid #000;
+            border: 1px solid var(--btn-dark);;
             text-decoration: none;
         }
 
-        .textUrl{
-            font-size: 1rem;
-            text-decoration: underline;
-        }
         .footer p {
             font-size: 1rem;
+            color: var(--btn-dark);
+        }
+
+        .textUrl{
+            font-family: Inter;
+            font-size: 1rem;
+            text-decoration: underline;
+            color: var(--btn-dark);
         }
 
         @media (min-width: 320px) and (max-height: 650px) {
             .main-img img {
-                max-width: 15rem;
+                max-width: 20rem;
             }
 
             .main-img .absolute img {
@@ -436,35 +435,19 @@
             }
         }
 
-        @media (min-width: 320px) and (max-height: 600px) {
+        @media (min-width: 320px) and (max-height: 550px) {
             .main-img img {
-                max-width: 12rem;
+                max-width: 15rem;
             }
 
             .main-img .absolute img {
                 max-width: 20rem;
             }
-            .btn{
-                width: 12rem;
-                height: 12rem;
-            }
-            .text-xl {
-                font-size: 1.5rem;
-            }
-            .text-2xl {
-                font-size: 1.5rem;
-            }
-            .textImg {
-                width: 8rem;
-            }
         }
 
         @media (min-width: 320px) and (max-height: 470px) {
-            .main-img img {
-                display: none;
-            }
             .btn {
-                padding: 1rem 0.7rem;
+                padding: 1rem 5.7rem;
                 max-width: 26rem;
             }
 
@@ -482,7 +465,7 @@
             }
         }
 
-        @media (min-width: 320px) and (max-height: 538px) {
+        @media (min-width: 320px) and (max-height: 500px) {
             .top-text-big {
                 display: none;
             }
@@ -518,15 +501,8 @@
         }
 
         @media (min-width: 355px) and (max-height: 700px) {
-        .btn {
-            width: 12rem;
-            height: 12rem;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 120px;
-        }
             .main-img img {
-                max-width: 12rem;
+                max-width: 20rem;
             }
 
             .main-img .absolute img {
@@ -546,7 +522,7 @@
 
         @media (min-width: 355px) and (max-height: 550px) {
             .btn {
-                padding: 1rem 0.7rem;
+                padding: 1rem 5.7rem;
                 max-width: 26rem;
             }
 
@@ -600,7 +576,7 @@
 
         @media (min-width: 410px) and (max-height: 770px) {
             .main-img img {
-                max-width: 15rem;
+                max-width: 20rem;
             }
 
             .main-img .absolute img {
@@ -610,7 +586,7 @@
 
         @media (min-width: 410px) and (max-height: 660px) {
             .main-img img {
-                max-width: 11rem;
+                max-width: 15rem;
             }
 
             .main-img .absolute img {
@@ -620,7 +596,7 @@
 
         @media (min-width: 410px) and (max-height: 610px) {
             .btn {
-                padding: 1rem 0.7rem;
+                padding: 1rem 5.7rem;
                 max-width: 26rem;
             }
 
@@ -674,29 +650,17 @@
 
         @media (min-width: 460px) and (max-height: 820px) {
             .main-img img {
-                max-width: 12rem;
+                max-width: 20rem;
             }
 
             .main-img .absolute img {
                 max-width: 30rem;
             }
-            .btn {
-                width: 15rem;
-                height: 15rem;
-                text-decoration: none;
-                text-align: center;
-                border-radius: 120px;
-}
         }
 
         @media (min-width: 460px) and (max-height: 710px) {
-            .btn {
-                padding: 1rem 0.7rem;
-                width: 12rem;
-                height: 12rem;
-            }
             .main-img img {
-                max-width: 11rem;
+                max-width: 15rem;
             }
 
             .main-img .absolute img {
@@ -706,7 +670,7 @@
 
         @media (min-width: 460px) and (max-height: 660px) {
             .btn {
-                padding: 1rem 0.7rem;
+                padding: 1rem 5.7rem;
                 max-width: 26rem;
             }
 
@@ -772,13 +736,7 @@
             .main-img img {
                 max-width: 15rem;
             }
-            .btn{
-                width: 12rem;
-                height: 12rem;
-            }
-            .textImg {
-                width: 8rem;
-            }
+
             .main-img .absolute img {
                 max-width: 20rem;
             }
@@ -786,19 +744,12 @@
 
         @media (min-width: 500px) and (max-height: 720px) {
             .btn {
-                padding: 1rem 0.7rem;
-                width: 12rem;
-                height: 12rem;
+                padding: 1rem 5.7rem;
+                max-width: 26rem;
             }
-            .main-img img {
-                max-width: 12rem;
-            }
-            .textImg {
-                width: 7rem;
-   
-            }
+
             .btn span:nth-child(1) {
-                font-size: 1.8rem;
+                font-size: 1rem;
             }
             .btn span:nth-child(2) {
                 font-size: 2rem;
@@ -857,7 +808,7 @@
 
         @media (min-width: 550px) and (max-height: 820px) {
             .main-img img {
-                max-width: 12rem;
+                max-width: 15rem;
             }
 
             .main-img .absolute img {
@@ -867,7 +818,7 @@
 
         @media (min-width: 550px) and (max-height: 745px) {
             .btn {
-                padding: 1rem 0.7rem;
+                padding: 1rem 5.7rem;
                 max-width: 26rem;
             }
 
@@ -932,20 +883,17 @@
 
         @media (min-width: 600px) and (max-height: 870px) {
             .main-img img {
-                max-width: 12rem;
+                max-width: 15rem;
             }
 
             .main-img .absolute img {
                 max-width: 20rem;
             }
-        .mb-2 {
-            margin-bottom: 1rem;
-        }
         }
 
         @media (min-width: 600px) and (max-height: 795px) {
             .btn {
-                padding: 1rem 0.7rem;
+                padding: 1rem 5.7rem;
                 max-width: 26rem;
             }
 
@@ -999,18 +947,9 @@
 
         @media (min-width: 640px) and (max-height: 960px) {
             .main-img img {
-                max-width: 15rem;
+                max-width: 20rem;
             }
-            .btn {
-    width: 15rem;
-    height: 15rem;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 180px;
-}
-.mb-2 {
-    margin-bottom: 1rem;
-}
+
             .main-img .absolute img {
                 max-width: 30rem;
             }
@@ -1018,7 +957,6 @@
 
         @media (min-width: 640px) and (max-height: 930px) {
             .main-img img {
-                display: none;
                 max-width: 15rem;
             }
 
@@ -1029,14 +967,9 @@
 
         @media (min-width: 640px) and (max-height: 845px) {
             .btn {
-                padding: 0rem 0.7rem;
-                width: 12rem;
-                height: 12rem;
-                border-radius: 170px;
+                padding: 1rem 5.7rem;
+                max-width: 26rem;
             }
-            .pt-1 {
-    padding-top: 0.5rem;
-}
 
             .btn span:nth-child(1) {
                 font-size: 1.8rem;
@@ -1082,7 +1015,7 @@
 
         @media (orientation: landscape) {
             .wrapper {
-                width: 100vw;
+                width: 200vw;
                 left: 50%;
                 transform: translate(-50%, 0);
             }
@@ -1092,7 +1025,6 @@
             :root {
                 font-size: 10px;
             }
-
         }
 
 
@@ -1225,12 +1157,12 @@
             </div>
         </div>
         <div class="day-free text-center text-white mb-1">
-            <img class="textImg" src="./text.png" />
+            <p class="text text-large">1 день бесплатно</p>
         </div>
         <div class="btn-content flex justify-center align-center relative">
             <a href="#" class="btn link rounded bg-green flex flex-col justify-center align-stretch w-100">
-                <span class="lh-large text-xl text-upper">ПОЛУЧИТЬ</span>
-                <span class="lh-large text-2xl text-upper text-bold">ШАНС</span>
+                <span class="lh-large text-xl text-upper">ПОПРОБОВАТЬ</span>
+                <span class="lh-large text-2xl text-upper text-bold">ЗАБРАТЬ ПРИЗ</span>
             </a>
             <div class="white-block bg-white absolute w-100 h-100 b-0 z-index-0">
             </div>
@@ -1243,11 +1175,11 @@
                 <a href="#" class="cancel-link link-dark rounded inline-block">Отмена</a>
             </div>
         </div>
-        <div class="container pb-1 mt-a ">
+        <div class="container pb-1 mt-a w-100">
             <div class="footer flex justify-between align-center">
-                <a class="textUrl">Правила подписки поставщика услуги</a>
+                <p class="textUrl">Правила подписки поставщика услуги</p>
                 <p class="text text-center grow">|</p>
-                <a class="textUrl">Личный кабинет</a>
+                <p class="textUrl">Личный кабинет</p>
             </div>
         </div>
     </div>
@@ -1269,63 +1201,6 @@
         document.documentElement.style.setProperty('--vh', `${vh}px`);
         document.getElementById('test').innerHTML = `${vh}px`
         });
-    
-       window.addEventListener('loaded', () => {
-       // We execute the same script as before
-       let vh = window.innerHeight * 0.01;
-       document.documentElement.style.setProperty('--vh', `${vh}px`);
-       })
-       // We listen to the resize event
-       window.addEventListener('resize', () => {
-       // We execute the same script as before
-       let vh = window.innerHeight * 0.01;
-       document.documentElement.style.setProperty('--vh', `${vh}px`);
-       document.getElementById('test').innerHTML = `${vh}px`
-       });
-       /*The window.onload function will run as  
-       soon as the window loads in the browser */
-       window.onload = function () { 
- 
-           /* This method returns the html element that 
-               has the ID attribute with the specified 
-               value. */
-           let canvas = document.getElementById("canv"); 
- 
-           /* This method returns a drawing context 
-               on the canvas, or null if the context 
-               identified is not supported. */
-           let context = canvas.getContext("2d"); 
-
-           /* It will change the style and appearance  
-               of the text to make it look more geeky. */
-           context.font = "32px 'Roboto', sans-serif"; 
-           context.fillStyle = "#fff"; 
-           context.textAlign = "center"; 
- 
-           let string = "1 день бесплатно"; 
- 
-           let angle = Math.PI * 0.33; // in radians 
-           let radius = 250; 
- 
- 
-           context.translate(300, 360); 
-           context.rotate(-1 * angle / 2); 
- 
-           for (let i = 0; i < string.length; i++) { 
- 
-               /* It is worth noting that we are not 
-                   rotating the text,here the whole 
-                   context is being rotated and 
-                   translated, and the letters are just 
-                   filled in it. */
-               context.rotate(angle / string.length); 
-               context.save(); 
-               context.translate(0, -1 * radius); 
-               context.fillText(string[i], 0, 0); 
-               context.restore(); 
-           } 
-       }; 
-
     </script>
 </body>
 
