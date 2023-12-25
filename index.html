@@ -1256,22 +1256,6 @@
         // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-        document.documentElement.style.setProperty('--bg-purple', `#00B858`);
-        document.documentElement.style.setProperty('--bg-green', `#721983`);
-        document.documentElement.style.setProperty('--bg-logo', `#721983`);
-        document.documentElement.style.setProperty('--shadow-color', `#ffffff`);
-
-        
-
-        document.getElementById('cancel').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('points').classList.toggle('hide');
-            document.getElementById('bg').classList.toggle('bg-gradient-purple');
-            document.getElementById('wb').classList.toggle('hide');
-            document.getElementById('wrapper').classList.toggle('text-white');
-            document.querySelector('.bot-content').querySelector('p').classList.toggle('text-black');
-            document.getElementById('cancel').classList.toggle('link-dark');
-        });
 
         window.addEventListener('loaded', () => {
         // We execute the same script as before
