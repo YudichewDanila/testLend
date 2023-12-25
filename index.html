@@ -1260,15 +1260,7 @@
         document.documentElement.style.setProperty('--bg-logo', `#721983`);
         document.documentElement.style.setProperty('--shadow-color', `#ffffff`);
 
-        document.getElementById('btn').addEventListener('click', (e) => {
-            e.preventDefault();
-            const imgs = [...document.querySelectorAll('.main-img-view')];
-            const currentIndex = imgs.findIndex(el => !el.classList.contains('hide'));
-            const next = (imgs[(currentIndex + 1)] !== undefined) ? imgs[(currentIndex + 1)] : imgs[0];
-
-            imgs[currentIndex].classList.add('hide');
-            next.classList.remove('hide');
-        });
+        
 
         document.getElementById('cancel').addEventListener('click', (e) => {
             e.preventDefault();
