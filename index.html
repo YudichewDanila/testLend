@@ -27,12 +27,12 @@
         :root {
             font-size: 10px;
             --btn-color: #ffffff;
-            --btn-dark: #000000;
+            --btn-dark: #ffffff;
             --bg-purple: #721983;
             --bg-green: #00B858;
             --bg-white: #ffffff;
             --shadow-color: transparent;
-            --text-dark: #000000;
+            --text-dark: #ffffff;
         }
 
         html {
@@ -400,6 +400,7 @@
         }
 
         .main-img .absolute img {
+            display: none;
             max-width: 30rem;
         }
 
@@ -416,6 +417,7 @@
         }
 
         .white-block {
+            display: none;
             background-color: #fff !important;
             width: 70rem;
             min-width: 120vw;
@@ -448,11 +450,13 @@
 
         .footer p {
             font-size: 1rem;
+            color:var(--btn-dark);
         }
 
         .textUrl{
             font-size: 1rem;
             text-decoration: underline;
+            color:var(--btn-dark);
         }
 
         @media (min-width: 320px) and (max-height: 650px) {
@@ -1281,7 +1285,7 @@
 
 <body>
     <div id="wrapper" class="wrapper fixed w-100 h-100 flex flex-col">
-        <div id="bg" class="z-index-0 bg-purple fixed t-0 l-0 w-100 h-100"></div>
+        <div id="bg" class="z-index-0 bg-gradient-purple fixed t-0 l-0 w-100 h-100"></div>
 
         <div class="header container flex justify-between align-center mb-1 pt-1">
             <div class="box bg-green rounded">
@@ -1339,7 +1343,7 @@
         </div>
         <div class="top-text container top-text-big mb-2 text-white">
             <p class="text text-center">
-                Читайте популярные журналы с Мобильным Киоском. Получите шанс выиграть приз, оформив подписку на сервис.
+                Получите шанс выиграть приз с Мобильным Киоском. Оформите подписку на сервис и участвуйте в розыгрыше. 
             </p>
         </div>
         <div class="container img-container pt-1">
@@ -1367,8 +1371,8 @@
         </div>
         <div class="btn-content flex justify-center align-center relative">
             <a href="#" id="btn" class="btn link rounded bg-green flex flex-col justify-center align-stretch w-100">
-                <span class="lh-large text-xl text-upper">ПОЛУЧИТЬ</span>
-                <span class="lh-large text-2xl text-upper text-bold">ШАНС</span>
+                <span class="lh-large text-xl text-upper">ИСПЫТАТЬ</span>
+                <span class="lh-large text-2xl text-upper text-bold">УДАЧУ</span>
             </a>
             <div  class="white-block absolute w-100 h-100 b-0 z-index-0 shadow">
             </div>
